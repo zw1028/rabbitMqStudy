@@ -45,7 +45,7 @@ public class ListennerOne {
 			}
 
 		};
-		// 监听队列
+		// 监听队列 自动应答，一旦消息分发给消费者就会从内存中删除。如果消费者进程中途挂掉则消息消失。。。。。。
 		channel.basicConsume(QUEUE_NAME, true, comsumer);
 	}
 }
